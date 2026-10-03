@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
@@ -39,11 +38,15 @@ body {
   overflow-x: hidden;
 }
 
-body, button, input, textarea {
+body,
+button,
+input,
+textarea {
   font-family: "DM Sans", sans-serif;
 }
 
-button, a {
+button,
+a {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -56,8 +59,10 @@ a {
   text-decoration: none;
 }
 
-button:focus-visible, a:focus-visible,
-input:focus-visible, textarea:focus-visible {
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 4px;
 }
@@ -67,7 +72,10 @@ input:focus-visible, textarea:focus-visible {
   color: white;
 }
 
-h1, h2, h3, .logo {
+h1,
+h2,
+h3,
+.logo {
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: -0.04em;
 }
@@ -88,9 +96,8 @@ p {
 }
 
 .content-section {
-   padding-top: 60px; /* was 115px */
+  padding-top: 60px; /* was 115px */
   padding-bottom: 25px;
-
 }
 
 .section-heading {
@@ -119,15 +126,44 @@ p {
 
 .gradient-text {
   color: transparent;
-  background: linear-gradient(110deg, #ffffff 0%, #7bb7ff 40%, #69f0ff 75%, #a58aff 100%);
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #7bb7ff 40%,
+    #69f0ff 75%,
+    #a58aff 100%
+  );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   animation: gradient-flow 7s linear infinite;
 }
 
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @keyframes gradient-flow {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* Star field and moving ambient gradients */
@@ -139,8 +175,7 @@ p {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% -20%, #102044 0%, transparent 58%),
-    #050814;
+    radial-gradient(ellipse at 50% -20%, #102044 0%, transparent 58%), #050814;
 }
 
 .star {
@@ -152,8 +187,14 @@ p {
 }
 
 @keyframes twinkle {
-  0% { opacity: 0.12; transform: scale(0.65); }
-  100% { opacity: 0.9; transform: scale(1.25); }
+  0% {
+    opacity: 0.12;
+    transform: scale(0.65);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.25);
+  }
 }
 
 .ambient-glow {
@@ -189,9 +230,15 @@ p {
 }
 
 @keyframes float-glow {
-  0% { transform: translate(0, 0) scale(0.9); }
-  50% { transform: translate(100px, -70px) scale(1.15); }
-  100% { transform: translate(-40px, 80px) scale(1); }
+  0% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  50% {
+    transform: translate(100px, -70px) scale(1.15);
+  }
+  100% {
+    transform: translate(-40px, 80px) scale(1);
+  }
 }
 
 /* Keep all actual content above the background */
@@ -201,12 +248,13 @@ p {
   z-index: 1;
 }
 
-main, .navbar, .footer {
+main,
+.navbar,
+.footer {
   position: relative;
 }
 
 /* Navbar */
-
 
 /* Navbar */
 
@@ -404,7 +452,10 @@ main, .navbar, .footer {
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 600;
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
 }
 
 .button:hover {
@@ -491,7 +542,9 @@ main, .navbar, .footer {
 }
 
 @keyframes orbit-rotate {
-  to { rotate: 360deg; }
+  to {
+    rotate: 360deg;
+  }
 }
 
 .hero-avatar {
@@ -504,8 +557,14 @@ main, .navbar, .footer {
   gap: 22px;
   border-radius: 115px 115px 32px 32px;
   border: 1px solid rgba(129, 182, 255, 0.42);
-  background: linear-gradient(145deg, rgba(49, 101, 205, 0.3), rgba(11, 17, 38, 0.92));
-  box-shadow: 0 0 75px rgba(47, 109, 255, 0.17), inset 0 0 50px rgba(71, 135, 255, 0.08);
+  background: linear-gradient(
+    145deg,
+    rgba(49, 101, 205, 0.3),
+    rgba(11, 17, 38, 0.92)
+  );
+  box-shadow:
+    0 0 75px rgba(47, 109, 255, 0.17),
+    inset 0 0 50px rgba(71, 135, 255, 0.08);
   z-index: 1;
   animation: avatar-float 5s ease-in-out infinite;
 }
@@ -527,8 +586,13 @@ main, .navbar, .footer {
 }
 
 @keyframes avatar-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .float-card {
@@ -546,7 +610,8 @@ main, .navbar, .footer {
   animation: avatar-float 5s ease-in-out infinite;
 }
 
-.float-card strong, .float-card small {
+.float-card strong,
+.float-card small {
   display: block;
 }
 
@@ -598,18 +663,31 @@ main, .navbar, .footer {
 }
 
 @keyframes rise-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Glass cards */
 
 .glass-card {
   border: 1px solid var(--border);
-  background: linear-gradient(145deg, rgba(19, 30, 56, 0.78), rgba(8, 14, 29, 0.76));
+  background: linear-gradient(
+    145deg,
+    rgba(19, 30, 56, 0.78),
+    rgba(8, 14, 29, 0.76)
+  );
   border-radius: 17px;
   backdrop-filter: blur(15px);
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .glass-card:hover {
@@ -633,7 +711,8 @@ main, .navbar, .footer {
   justify-content: center;
 }
 
-.card-icon, .skill-icon {
+.card-icon,
+.skill-icon {
   display: grid;
   place-items: center;
   width: 43px;
@@ -649,7 +728,8 @@ main, .navbar, .footer {
   font-size: 1.55rem;
 }
 
-.about-main p, .about-detail p:not(.muted) {
+.about-main p,
+.about-detail p:not(.muted) {
   margin-top: 14px;
   color: var(--muted);
   font-size: 0.9rem;
@@ -714,7 +794,8 @@ main, .navbar, .footer {
   font-size: 0.82rem;
 }
 
-.filter.active, .filter:hover {
+.filter.active,
+.filter:hover {
   color: white;
   background: rgba(59, 115, 255, 0.17);
   border-color: rgba(92, 153, 255, 0.5);
@@ -764,8 +845,12 @@ main, .navbar, .footer {
 }
 
 @keyframes progress-in {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .skill-note {
@@ -809,7 +894,8 @@ main, .navbar, .footer {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(120, 166, 255, 0.07) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(120, 166, 255, 0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(120, 166, 255, 0.07) 1px, transparent 1px);
   background-size: 25px 25px;
   mask-image: linear-gradient(to bottom, black, transparent);
@@ -830,7 +916,9 @@ main, .navbar, .footer {
   height: 135px;
   border: 1px solid rgba(126, 177, 255, 0.5);
   border-radius: 50%;
-  box-shadow: 0 0 65px rgba(68, 128, 255, 0.18), inset 0 0 35px rgba(68, 128, 255, 0.15);
+  box-shadow:
+    0 0 65px rgba(68, 128, 255, 0.18),
+    inset 0 0 35px rgba(68, 128, 255, 0.15);
   animation: avatar-float 6s ease-in-out infinite;
 }
 
@@ -953,7 +1041,8 @@ main, .navbar, .footer {
   gap: 10px;
 }
 
-.education-top .muted, .education-location {
+.education-top .muted,
+.education-location {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -1025,7 +1114,8 @@ main, .navbar, .footer {
   font-size: 0.81rem;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 13px 14px;
   color: white;
@@ -1036,7 +1126,8 @@ main, .navbar, .footer {
   resize: vertical;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: #5999ff;
 }
 
@@ -1092,7 +1183,9 @@ main, .navbar, .footer {
   border: 1px solid var(--border);
   border-radius: 9px;
   color: #b9cce9;
-  transition: color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .footer-actions a:hover {
@@ -1289,7 +1382,9 @@ main, .navbar, .footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
