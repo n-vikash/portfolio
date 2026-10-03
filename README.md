@@ -1,19 +1,52 @@
-# React + Vite
+Act as an expert frontend developer and UI/UX designer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build a modern, responsive personal portfolio website for Nubothu Vikash, a final-year B.Tech Artificial Intelligence and Data Science student specializing in frontend development.
 
-Currently, two official plugins are available:
+Tech stack:
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
+- Lucide React icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Design requirements:
+- Use a modern dark theme with blue and black gradients.
+- Add an animated star background.
+- Create a visually appealing hero section with my name, role, introduction, and social links.
+- Include About, Skills, Projects, Education, and Contact sections.
+- Use glassmorphism-inspired cards and subtle hover effects.
+- Add smooth scrolling and scroll-triggered fade-in animations.
+- Ensure the website works properly on desktop, tablet, and mobile devices.
+- Maintain consistent spacing, typography, colors, and layout.
+- Keep animations smooth and respect reduced-motion accessibility preferences.
 
-## React Compiler
+Functionality:
+- Use reusable React components.
+- Store portfolio information in a centralized data file.
+- Display skills and projects dynamically from the data.
+- Include GitHub and LinkedIn links.
+- Add a working contact section.
+- Provide a resume download button that downloads my PDF resume.
+- Ensure navigation links point to the correct sections.
+- Optimize the website for performance and accessibility.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Portfolio content:
+- Name: Nubothu Vikash
+- Role: Frontend Developer
+- Education: B.Tech in Artificial Intelligence and Data Science at Satya Institute of Technology and Management, Vizianagaram.
+- Skills: HTML, CSS, JavaScript, React.js, API integration, Leaflet.js, Python, Git, and GitHub.
+- Projects: Mapy Workout Tracker and Four-Player Dice Challenge.
+- GitHub: https://github.com/n-vikash
+- LinkedIn: https://linkedin.com/in/vikash-834h
+- Email: vikasnubothu810@gmail.com
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+Code requirements:
+- Use a clean and maintainable folder structure.
+- Separate components, data, and styles.
+- Write readable JSX and CSS.
+- Avoid unnecessary dependencies.
+- Ensure the application builds successfully.
+- Make the resume download and all external links functional.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The final result should be a polished developer portfolio suitable for internship and frontend developer job applications.
