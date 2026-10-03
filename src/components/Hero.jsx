@@ -62,6 +62,14 @@ function Hero() {
           >
             Get in touch
           </a>
+
+          <a
+            className="button button-outline"
+            href="/resume.pdf"
+            download="Nubothu_Vikash_Resume.pdf"
+          >
+            Download Resume
+          </a>
         </div>
 
         {/* Social links */}
@@ -138,3 +146,4 @@ function Hero() {
 }
 
 export default Hero;
+
